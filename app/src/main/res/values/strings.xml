@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Monoshop</string>
+    <string name="background">Background</string>
+    <string name="start">start</string>
+    <string name="exit">exit</string>
+    <string name="decree">decree</string>
+    <string name="opsi_mengenal_uang">opsi mengenal uang</string>
+    <string name="opsi_berbelanja">Opsi Berbelanja</string>
+    <string name="mari_kita_mengenal_uang">Mari Kita Mengenal Uang</string>
+    <string name="jumlah_uang">Rp. %1s</string>
+    <string name="harga_1s">Harga: Rp. %1s</string>
+    <string name="uang_yang_akan_dibayar_1s">Uang yang akan dibayar:Rp. %1s</string>
+</resources>

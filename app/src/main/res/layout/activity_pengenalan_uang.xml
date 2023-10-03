@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEFDE"
+    tools:context=".PengenalanUangActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="276dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elemenkananatas" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elemenkiriatas" />
+
+    <ImageView
+        android:id="@+id/btn_next"
+        style="?android:borderlessButtonStyle"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/rightarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_prev"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/leftarrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/mari_kita_mengenal_uang"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/seribu"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/seribu"
+        app:layout_constraintEnd_toStartOf="@+id/duaribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/duaribu"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/duaribu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/limaribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seribu"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/limaribu"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="108dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/limaribu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/duaribu"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/sepuluhribu"
+        style="?android:borderlessButtonStyle"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/sepuluhribu"
+        app:layout_constraintEnd_toStartOf="@+id/duapuluhribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seribu" />
+
+    <ImageView
+        android:id="@+id/duapuluhribu"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/duapuluhribu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/limapuluhribu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sepuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/duaribu" />
+
+    <ImageView
+        android:id="@+id/limapuluhribu"
+        style="?android:borderlessButtonStyle"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="108dp"
+        android:src="@drawable/limapuluhribu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/duapuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/limaribu" />
+
+    <ImageView
+        android:id="@+id/seratusribu"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/seratusribu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/duapuluhribu"
+        app:layout_constraintStart_toStartOf="@+id/duapuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/duapuluhribu" />
+
+    <ImageView
+        android:id="@+id/mute"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_volume_off_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_volume_up_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

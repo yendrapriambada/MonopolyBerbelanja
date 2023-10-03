@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEFDE"
+    tools:context=".PaymentActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="276dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elemenkananatas" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="93dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="-6dp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/elemenkiribawah" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elemenkiriatas" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:text="Jumlah Uang:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/jmlUang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/jumlah_uang"
+        android:textColor="@color/blue_700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Jumlah Jajanan:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/jmlUang"
+        app:layout_constraintStart_toStartOf="@+id/jmlUang"
+        app:layout_constraintTop_toBottomOf="@+id/jmlUang" />
+
+    <TextView
+        android:id="@+id/jmlJajanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/silahkan_pilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pilih Uang"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_seribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_seribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/cb_duaribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cb_duaribu" />
+
+    <CheckBox
+        android:id="@+id/cb_duaribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_duaribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/cb_limaribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_seribu"
+        app:layout_constraintTop_toBottomOf="@+id/silahkan_pilih" />
+
+    <CheckBox
+        android:id="@+id/cb_limaribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_limaribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_duaribu"
+        app:layout_constraintTop_toTopOf="@+id/cb_duaribu" />
+
+    <CheckBox
+        android:id="@+id/cb_sepuluhribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_sepuluhribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/cb_duapuluhribu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_seribu" />
+
+    <CheckBox
+        android:id="@+id/cb_duapuluhribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_duapuluhribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/cb_limapuluhribu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cb_sepuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_duaribu" />
+
+    <CheckBox
+        android:id="@+id/cb_limapuluhribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_limapuluhribu"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_duapuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_limaribu" />
+
+    <CheckBox
+        android:id="@+id/cb_seratusribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_seratusribu"
+        android:onClick="onCheckBoxChecked"
+        app:layout_constraintEnd_toEndOf="@+id/cb_sepuluhribu"
+        app:layout_constraintStart_toStartOf="@+id/cb_sepuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_sepuluhribu" />
+
+    <CheckBox
+        android:id="@+id/cb_limaratuskoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_limaratusrupiah"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/cb_duapuluhribu"
+        app:layout_constraintStart_toStartOf="@+id/cb_duapuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_duapuluhribu" />
+
+    <CheckBox
+        android:id="@+id/cb_seribukoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checkbox_selection"
+        android:button="@null"
+        android:drawableEnd="@drawable/pay_seribukoin"
+        android:onClick="onCheckBoxChecked"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/cb_limapuluhribu"
+        app:layout_constraintStart_toStartOf="@+id/cb_limapuluhribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_limapuluhribu" />
+
+
+    <TextView
+        android:id="@+id/harga_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/harga_1s"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/cb_seratusribu"
+        app:layout_constraintTop_toBottomOf="@+id/cb_seratusribu" />
+
+    <TextView
+        android:id="@+id/uang_yang_akan_dibayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uang_yang_akan_dibayar_1s"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/cb_seratusribu"
+        app:layout_constraintTop_toBottomOf="@+id/harga_barang" />
+
+
+    <Button
+        android:id="@+id/btn_bayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Bayar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/mute"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_volume_off_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_volume_up_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
